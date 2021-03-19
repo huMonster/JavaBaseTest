@@ -1,7 +1,7 @@
 package com.base.jvm.oom;
 
 /**
- * @Description OOM异常之栈溢出  默认大小512k~1024k
+ * @Description 栈溢出  默认大小512k~1024k
  * @Author Monster
  * @Date 2021/2/20 11:00
  * @Version 1.0
@@ -9,6 +9,8 @@ package com.base.jvm.oom;
 public class StackOverflowErrorDemo {
 
     /**
+     *
+     *
      * StackOverflowError 属于 Error
      * 结构： java.lang.Object
      *          java.lang.Throwable

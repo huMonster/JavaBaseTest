@@ -1,4 +1,4 @@
-package com.base.jmm.useVolatile;
+package com.base.keyword.useVolatile;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

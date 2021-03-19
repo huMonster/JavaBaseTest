@@ -1,4 +1,4 @@
-package com.base.jmm.useVolatile;
+package com.base.keyword.useVolatile;
 
 /**
  * @Description volatile在单例模式的应用场景

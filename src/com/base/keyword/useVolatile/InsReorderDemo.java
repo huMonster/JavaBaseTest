@@ -1,4 +1,4 @@
-package com.base.jmm.useVolatile;
+package com.base.keyword.useVolatile;
 
 /**
  * @Description volatile禁止指令重排
