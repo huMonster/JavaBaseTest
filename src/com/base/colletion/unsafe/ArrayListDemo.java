@@ -10,9 +10,21 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * @Version 1.0
  */
 public class ArrayListDemo {
+    /**
+     * 1、故障现象
+     *         java.util.ConcurrentModificationException
+     * 2、导致原因
+     *         并发争抢修改导致，参考花名册签名例子
+     *         一个同学正在写，另一个同学来争抢，导致异常
+     * 3、解决方案
+     *          3.1、new Vector<>()
+     *          3.2、Collections.synchronizedList(new ArrayList<>());
+     *          3.3、new CopyOnWriteArrayList<>()
+     * 4、优化建议（避免再犯）
+     */
     public static void main(String[] args) {
-//        vector线程安全，并发性急剧下降
-        List<String> vector = new Vector<>();
+        // vector线程安全，并发性急剧下降
+//        List<String> vector = new Vector<>();
         // 线程不安全，性能高，单线程使用
 //        List<String> list = new ArrayList<>();
         // 正确方法两种
@@ -32,19 +44,5 @@ public class ArrayListDemo {
                 System.out.println(list);
             }, String.valueOf(i)).start();
         }
-        /**
-         * 1、故障现象
-         *         java.util.ConcurrentModificationException
-         * 2、导致原因
-         *         并发争抢修改导致，参考花名册签名例子
-         *         一个同学正在写，另一个同学来争抢，导致异常
-         * 3、解决方案
-         *          3.1、new Vector<>()
-         *          3.2、Collections.synchronizedList(new ArrayList<>());
-         *          3.3、new CopyOnWriteArrayList<>()
-         * 4、优化建议（避免再犯）
-         */
-
-
     }
 }
