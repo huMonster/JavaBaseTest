@@ -7,8 +7,9 @@ package com.base.singleton.lazy;
  * @Version 1.0
  */
 /**
- * 懒汉三式： 延迟创建实例（线程安全）
+ * 懒汉三式： 延迟创建实例
  * 缺点：太繁杂，代码不够优雅
+ * 安全版在 com.base.keyword.useVolatile包的ApplicationDemo类
  *
  * 步骤：
  *      1、私有构造器
